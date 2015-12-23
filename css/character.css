@@ -1,0 +1,168 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  font: 1em "Arvo", serif; }
+
+.character-sheet {
+  font-size: .875rem;
+  max-width: 20rem; }
+  .character-sheet header {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .character-sheet header::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .character-sheet header img {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 31.7615656014%;
+      height: auto; }
+      .character-sheet header img:last-child {
+        margin-right: 0; }
+      .character-sheet header img:nth-child(2) {
+        margin-right: 0; }
+    .character-sheet header .fields {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 65.8807828007%; }
+      .character-sheet header .fields:last-child {
+        margin-right: 0; }
+  .character-sheet .field {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font: 1rem "Patrick Hand", cursive;
+    line-height: 1.4375rem;
+    margin-bottom: 1.5rem;
+    float: left;
+    display: block;
+    margin-right: 3.5786636068%;
+    width: 100%; }
+    .character-sheet .field:last-child {
+      margin-right: 0; }
+    .character-sheet .field::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .character-sheet .field[title]::after {
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      content: attr(title);
+      font: 0.75rem "Arvo", serif;
+      line-height: 1rem;
+      vertical-align: middle;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.5); }
+    .character-sheet .field[title="Name"] {
+      font-size: 1.5rem;
+      line-height: 1.9375rem; }
+    .character-sheet .field[title="Level"] {
+      float: left;
+      display: block;
+      margin-right: 3.5786636068%;
+      width: 22.3160022949%; }
+      .character-sheet .field[title="Level"]:last-child {
+        margin-right: 0; }
+    .character-sheet .field[title="Alignment"] {
+      float: left;
+      display: block;
+      margin-right: 3.5786636068%;
+      width: 74.1053340983%; }
+      .character-sheet .field[title="Alignment"]:last-child {
+        margin-right: 0; }
+  .character-sheet .abilities {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .character-sheet .abilities::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .character-sheet .abilities dt, .character-sheet .abilities dd {
+      margin: 0;
+      padding: 0;
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 14.7019570017%;
+      line-height: 1.5rem; }
+      .character-sheet .abilities dt:last-child, .character-sheet .abilities dd:last-child {
+        margin-right: 0; }
+      .character-sheet .abilities dt:nth-child(4n), .character-sheet .abilities dd:nth-child(4n) {
+        margin-right: 0; }
+      .character-sheet .abilities dt:nth-child(4n+1), .character-sheet .abilities dd:nth-child(4n+1) {
+        clear: left; }
+    .character-sheet .abilities dt {
+      font-family: "Arvo", serif;
+      text-transform: uppercase;
+      vertical-align: middle;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: .75rem; }
+    .character-sheet .abilities dd {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 31.7615656014%;
+      font-family: "Patrick Hand", cursive; }
+      .character-sheet .abilities dd:last-child {
+        margin-right: 0; }
+      .character-sheet .abilities dd span, .character-sheet .abilities dd small {
+        float: left;
+        display: block;
+        margin-right: 16.0363113405%;
+        width: 41.9818443298%;
+        line-height: 1.5rem;
+        vertical-align: middle; }
+        .character-sheet .abilities dd span:last-child, .character-sheet .abilities dd small:last-child {
+          margin-right: 0; }
+      .character-sheet .abilities dd span {
+        font-size: 1.5rem;
+        text-align: right; }
+      .character-sheet .abilities dd small {
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.5); }
+  .character-sheet .skills, .character-sheet .inventory {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%; }
+    .character-sheet .skills:last-child, .character-sheet .inventory:last-child {
+      margin-right: 0; }
+    .character-sheet .skills:nth-child(2n), .character-sheet .inventory:nth-child(2n) {
+      margin-right: 0; }
+    .character-sheet .skills:nth-child(2n+1), .character-sheet .inventory:nth-child(2n+1) {
+      clear: left; }
+    .character-sheet .skills ul, .character-sheet .inventory ul {
+      background-color: transparent;
+      background-image: -webkit-linear-gradient(-450deg, transparent 0%, transparent 95.8333333%, rgba(0, 0, 0, 0.1) 95.8333333%, rgba(0, 0, 0, 0.1) 100%);
+      background-image: linear-gradient(180deg,transparent 0%, transparent 95.8333333%, rgba(0, 0, 0, 0.1) 95.8333333%, rgba(0, 0, 0, 0.1) 100%);
+      background-size: 1.5rem 1.5rem;
+      background-repeat: repeat;
+      font: 0.875rem "Patrick Hand", cursive;
+      padding: 0 0 1px;
+      margin: 0; }
+    .character-sheet .skills li, .character-sheet .inventory li {
+      margin: 0;
+      padding: 0;
+      display: block;
+      list-style: none;
+      min-height: 1.5rem;
+      line-height: 1.5rem; }
+    .character-sheet .skills::before, .character-sheet .inventory::before {
+      font: 0.75rem "Arvo", serif;
+      line-height: 1rem;
+      color: rgba(0, 0, 0, 0.5);
+      display: block;
+      content: attr(title);
+      text-transform: uppercase;
+      background: none; }
+
+/*# sourceMappingURL=character.css.map */

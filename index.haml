@@ -1,0 +1,57 @@
+!!!
+%html
+  %head
+    %title Example Nerd Degree character sheet
+    %link{href: "https://fonts.googleapis.com/css?family=Patrick+Hand|Arvo", rel: "stylesheet", type: "text/css"}
+    %link{href: "css/character.css", rel: "stylesheet", type: "text/css"}
+  %body
+    %article.character-sheet
+      %header
+        .fields
+          .field{title: "Name"} Matt Powell
+          .field{title: "Race/Class"} Half-Elf Technomancer
+          .field{title: "Level"} 12
+          .field{title: "Alignment"} Chaotic Good
+        %img{src: "http://lorempixel.com/300/400/cats"}
+
+      %dl.abilities
+        %dt Str
+        %dd
+          %span 8
+          %small -1
+        %dt Dex
+        %dd
+          %span 12
+          %small +1
+        %dt Con
+        %dd
+          %span 10
+          %small +0
+        %dt Int
+        %dd
+          %span 14
+          %small +2
+        %dt Wis
+        %dd
+          %span 14
+          %small +2
+        %dt Chr
+        %dd
+          %span 16
+          %small +3
+
+      .skills{title: "Skills"}
+        %ul
+          %li Hacking the Gibson
+          %li Puncraft
+          %li Improvisation
+          %li Languages
+          %li Fashion sense
+
+      .inventory{title: "Inventory"}
+        %ul
+          %li +1 keyboard of smiting
+          %li Rubik’s Cube
+          %li Small vinyl figure
+          %li Pink sneakers
+          %li

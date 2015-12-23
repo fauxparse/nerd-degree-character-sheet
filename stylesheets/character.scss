@@ -1,0 +1,137 @@
+@import "bourbon", "neat";
+
+$serif: "Arvo", serif;
+$hand: "Patrick Hand", cursive;
+
+$grey: rgba(black, .5);
+$border: 1px solid rgba(black, .1);
+
+body {
+  font: 1em $serif;
+}
+
+.character-sheet {
+  font-size: .875rem;
+  max-width: 20rem;
+
+  header {
+    @include outer-container;
+
+    img {
+      @include span-columns(4);
+      @include omega(2);
+      height: auto;
+    }
+
+    .fields {
+      @include span-columns(8);
+    }
+  }
+
+  .field {
+    position: relative;
+    border-bottom: $border;
+    font: 1rem $hand;
+    line-height: 1.4375rem;
+    margin-bottom: 1.5rem;
+    @include span-columns(8 of 8);
+    @include clearfix;
+
+    &[title]::after {
+      @include position(absolute, 100% null null 0%);
+      content: attr(title);
+      font: .75rem $serif;
+      line-height: 1rem;
+      vertical-align: middle;
+      text-transform: uppercase;
+      color: $grey;
+    }
+
+    &[title="Name"] {
+      font-size: 1.5rem;
+      line-height: 1.9375rem;
+    }
+
+    &[title="Level"] {
+      @include span-columns(2 of 8);
+    }
+
+    &[title="Alignment"] {
+      @include span-columns(6 of 8);
+    }
+  }
+
+  .abilities {
+    @include outer-container;
+
+    dt, dd {
+      margin: 0;
+      padding: 0;
+      @include span-columns(2);
+      @include omega(4n);
+      line-height: 1.5rem;
+    }
+
+    dt {
+      font-family: $serif;
+      text-transform: uppercase;
+      vertical-align: middle;
+      color: $grey;
+      font-size: .75rem;
+    }
+
+    dd {
+      @include span-columns(4);
+      font-family: $hand;
+
+      span, small {
+        @include span-columns(1 of 2);
+        line-height: 1.5rem;
+        vertical-align: middle;
+      }
+
+      span {
+        font-size: 1.5rem;
+        text-align: right;
+      }
+
+      small {
+        font-size: 1rem;
+        color: $grey;
+      }
+    }
+  }
+
+  .skills, .inventory {
+    @include span-columns(6);
+    @include omega(2n);
+
+    ul {
+      @include linear-gradient(180deg, transparent 0%, transparent 95.8333333%, rgba(black, .1) 95.8333333%, rgba(black, .1) 100%);
+      background-size: 1.5rem 1.5rem;
+      background-repeat: repeat;
+      font: .875rem $hand;
+      padding: 0 0 1px;
+      margin: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: block;
+      list-style: none;
+      min-height: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    &::before {
+      font: .75rem $serif;
+      line-height: 1rem;
+      color: $grey;
+      display: block;
+      content: attr(title);
+      text-transform: uppercase;
+      background: none;
+    }
+  }
+}
